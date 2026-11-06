@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="wlinear-gradientth, initial-scale=1.0">
+  <title>Document</title>
+<style>
+#grt {
+background: linear-gradient(to bottom,
+#ffd1dc, #e6d6ff, #ceb1ffe2);
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+body {
+margin: 0px;
+}
+
+h1 {
+margin: 0px;
+}
+
+#fan1{
+width: 300px;
+height: 150px;
+background-color: rgba(255, 255, 255, 1);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+position: relative;
+}
+
+#tio{
+background-color: hwb(42 0% 0%);
+height: 5px;
+width: 30px;
+position: absolute;
+bottom: 0px;
+left: 5px;
+border-radius: 50px;
+}
+</style>
+</head>
+<body>
+
+<div id="grt">
+  <div id="fan1">
+  <h1 id="ha2"></h1>
+  <h1 id="ha1"></h1>
+  <div id="tio"></div>
+  </div>
+</div>
+
+<script>
+let ha1 = document.getElementById ("ha1");
+let ha2 = document.getElementById("ha2");
+let chang = document.getElementById("tio");
+let sev = 20 ;
+let sev2 = "" ;
+let changji = 0;
+
+(function () {
+  setInterval(function () {
+sev--;
+ha1.innerText = "剩余" + sev + "秒";
+ys();
+  },1000)
+})();
+
+(function () {
+  setInterval(function () {
+if (sev2 === "...") {
+sev2 = ""  
+} else {
+sev2+="."
+ha2.innerText = "加载中" + sev2  
+}
+  },1000)
+})();
+
+setInterval(
+function () {
+if (chang.style.left === "265px") {
+changji = 0 ;
+chang.style.left = 0 + "px"
+console.log(changji);
+} else {
+  changji++
+chang.style.left = changji + "px"
+console.log(changji);
+}
+},16);
+
+function ys() {
+if (sev <= 0) {
+window.location.href = "https://ys.mihoyo.com/cloud/#/"  
+} else {
+  
+}
+}
+
+
+</script>
+</body>
+</html>
